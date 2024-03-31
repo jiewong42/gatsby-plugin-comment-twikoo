@@ -1,9 +1,22 @@
-// package.json
 {
   "name": "gatsby-plugin-comment-twikoo",
   "version": "1.0.0",
+  "description": "twikoo.js for gatsby",
   "main": "gatsby-browser.js",
-  "dependencies": {
-    "react": "^17.0.2"
-  }
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiewong42/gatsby-plugin-comment-twikoo.git"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "author": "jiewong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jiewong42/gatsby-plugin-comment-twikoo/issues"
+  },
+  "homepage": "https://github.com/jiewong42/gatsby-plugin-comment-twikoo#readme"
 }
