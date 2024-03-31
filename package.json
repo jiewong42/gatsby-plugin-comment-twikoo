@@ -1,0 +1,9 @@
+// package.json
+{
+  "name": "gatsby-plugin-comment-twikoo",
+  "version": "1.0.0",
+  "main": "gatsby-browser.js",
+  "dependencies": {
+    "react": "^17.0.2"
+  }
+}
