@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
 
-class CommentComponent extends Component {
+interface CommentComponentProps {
+  pageContext: {
+    options: {
+      envId: string;
+    };
+  };
+}
+
+class CommentComponent extends Component<CommentComponentProps> {
   componentDidMount() {
-    const { envId, el, path, lang } = this.props.options;
+    const { envId } = this.props.pageContext.options
 
     const script = document.createElement('script');
     script.src = "https://cdn.jsdelivr.net/npm/twikoo@1.6.32/dist/twikoo.all.min.js";
@@ -12,9 +20,9 @@ class CommentComponent extends Component {
       // @ts-ignore
       window.twikoo.init({
         envId,
-        el,
-        path,
-        lang,
+        el: '#tcomment',
+        path: location.pathname ,
+        lang: 'zh-CN',
       });
     };
 
