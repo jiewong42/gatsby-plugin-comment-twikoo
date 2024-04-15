@@ -1,6 +1,6 @@
 {
   "name": "gatsby-plugin-comment-twikoo",
-  "version": "1.3.0",
+  "version": "1.3.2",
   "description": "twikoo 评论插件",
   "main": "src/CommentComponent.tsx",
   "scripts": {
