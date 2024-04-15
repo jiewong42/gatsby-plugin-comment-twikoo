@@ -1,8 +1,8 @@
 {
   "name": "gatsby-plugin-comment-twikoo",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "twikoo 评论插件",
-  "main": "CommentComponent.tsx",
+  "main": "src/CommentComponent.tsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,10 +11,15 @@
     "url": "git+https://github.com/jiewong42/gatsby-plugin-comment-twikoo.git"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "gatsby-plugin",
+    "comment"
   ],
   "author": "jiewong",
   "license": "ISC",
+  "peerDependencies": {
+    "gatsby": "^3.0.0"
+  },
   "bugs": {
     "url": "https://github.com/jiewong42/gatsby-plugin-comment-twikoo/issues"
   },
