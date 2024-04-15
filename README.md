@@ -1,58 +1,52 @@
 # gatsby-plugin-comment-twikoo
-twikoo.js for gatsby
-## 使用方法：
-```
+
+这是一个Gatsby插件，用于在你的Gatsby网站中添加Twikoo评论系统。
+
+## 安装
+
+使用npm：
+
+```bash
 npm i gatsby-plugin-comment-twikoo 
 ```
-或者
-```
+
+或者使用yarn：
+
+```bash
 yarn add gatsby-plugin-comment-twikoo --ignore-workspace-root-check
 ```
-配置 gatsby-config.js：
-```
-resolve: 'gatsby-plugin-comment-twikoo',
+
+## 配置
+
+在你的`gatsby-config.js`文件中添加以下配置：
+
+```javascript
+module.exports = {
+  plugins: [
+    {
+      resolve: 'gatsby-plugin-comment-twikoo',
       options: {
-        envId: 'YOUR_ENV_ID',
+        envId: 'YOUR_ENV_ID', // 替换为你的Twikoo环境ID
       },
-```
-为了传递 envId 这个参数，定义了一个 变量 pluginOptions 并传递
-配置 gatsby-node.js:
-```
-const pluginOptions = require('./gatsby-config').plugins.find(
-  (plugin) => plugin.resolve === 'gatsby-plugin-comment-twikoo'
-).options;
-
-//找到 createPage() 添加 options: pluginOptions,
-
-createPage({
-        path: post.fields.slug,
-        component: blogPost,
-        context: {
-          id: post.id,
-          previousPostId,
-          nextPostId,
-          options: pluginOptions,
-        },
-      })
-
-
-```
-在 post 模板中添加 pageContext，传递参数
-```
-const BlogPostTemplate = ({
-  data: { previous, next, site, markdownRemark: post },
-  location,
-  pageContext,
-})
-
+    },
+    // 其他插件...
+  ],
+};
 ```
 
-在你要添加的地方：
+## 使用
+
+在你的模板或页面中，你可以直接导入并使用`CommentComponent`：
+
+```jsx
+import CommentComponent from 'gatsby-plugin-comment-twikoo';
+
+// 在模板中使用
+<CommentComponent />
 ```
-import CommentComponent from "gatsby-plugin-comment-twikoo"
 
-<CommentComponent pageContext={pageContext} /> //使用组件
+`CommentComponent`会自动初始化Twikoo评论系统，并将其添加到你的页面中。
 
-```
+## 注意事项
 
-保存了在 gatsby-starter-blog 入门博客上修改的 三个文件。已测试
+- [获取环境ID（envId）](https://twikoo.js.org/backend.html)。
